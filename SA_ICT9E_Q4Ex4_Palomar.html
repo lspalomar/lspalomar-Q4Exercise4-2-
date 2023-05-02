@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mystery+Quest&display=swap" rel="stylesheet">
+	<title>ICT | Exercise 4</title>
+
+	<style>
+		body {
+			color: burlywood;
+			background-color: rebeccapurple;
+			font-family: 'Mystery Quest', cursive;
+			font-size: 30px;
+
+		}
+		h1 {
+			font-family: 'Mystery Quest', cursive;
+			text-decoration: underline;
+
+		}
+		button {
+			border-radius: 30px;
+			font-family: 'Bruno Ace', cursive;
+			color: bisque;
+		}
+		
+	</style>
+
+
+</head>
+
+
+<body>
+
+<h1>Online Conversion Calculator</h1>
+ 
+ 
+<h2>Length Converter</h2>
+
+<p>
+  <label>Input Meters</label>
+  <input id="inputMeters" type="number" placeholder="Input Meters" oninput="LengthConverter(this.value)" onchange="LengthConverter(this.value)">
+</p>
+
+
+<p>Kilometers: <span id="outputKilometersValue"></span></p>
+<p>Hectometer: <span id="outputHectometersValue"></span></p>
+<p>Decameter: <span id="outputDecametersValue"></span></p>
+<p>Decimeter: <span id="outputDecimetersValue"></span></p>
+<p>Centimeters: <span id="outputCentimetersValue"></span></p>
+<p>Millimeters: <span id="outputMilimetersValue"></span></p>
+
+<script>
+function LengthConverter(valNum) {
+  
+  document.getElementById("outputKilometersValue").innerHTML=valNum/1000;
+  document.getElementById("outputHectometersValue").innerHTML=valNum/100;
+  document.getElementById("outputDecametersValue").innerHTML=valNum/10;
+  document.getElementById("outputDecimetersValue").innerHTML=valNum*10;
+  document.getElementById("outputCentimetersValue").innerHTML=valNum*100;
+  document.getElementById("outputMilimetersValue").innerHTML=valNum*1000;
+}
+</script>
+
+</body>
+</html>
